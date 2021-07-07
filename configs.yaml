@@ -1,0 +1,21 @@
+model: 
+  name: "YOLOv3"
+  model_config: "yolov3.cfg"
+  weights: "yolov3.weights"
+
+dataset: 
+  name: "coco"
+  classes: "coco.names" # Total classes present in the COCO dataset is 80
+  vehicles: ["bicycle", "bus", "car", "motorbike", "train", "truck"] # Vehicle classes among the 80 classes 
+
+filepaths: 
+  input: "videos/traffic.mp4"
+  output: "videos/traffic_pred.avi"
+
+more_settings:
+  defaultConfidence: 0.5 # if a class confidence's score is below 0.5 the corresponding box will not be shown
+  defaultThreshold: 0.3 
+  GPU: False # if GPU is present set the flag to True
+  height: 416
+  width: 416
+  history: 10 # for how many frames an object needs to be checked if it stops getting detected
