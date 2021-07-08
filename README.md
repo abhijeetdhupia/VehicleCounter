@@ -11,7 +11,7 @@ VehicleCounter/
 .
 ├── coco.names
 ├── configs.yaml
-├── mean.py
+├── main.py
 ├── README.md
 ├── yolov3.cfg
 ├── yolov3.weights
